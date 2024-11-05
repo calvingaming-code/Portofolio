@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Form Rekam Medis  </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        background-image: url("portfolio2.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: Cambria;
+        text-align: center;
+    }
+    h1 {
+        font-size: 30px;
+        animation: teks ; 
+        animation-duration: 4s ;
+    }
+    .border {
+        border: 2px solid black;
+        border-radius: 8px;
+        margin: auto;
+        background-color: blanchedalmond;
+        width: 30%; 
+        margin-top: 15px;
+        margin-bottom: 10px;
+        animation-timing-function: ease-out;
+        animation: kotak 3s;
+        transition: 5.6s; 
+        transition-timing-function: ease-in-out;
+    }
+    form {
+        display: block;
+        background-color :white;
+        max-width: 680px;
+        margin: 50px auto;
+        padding: 30px 20px;
+        box-shadow: 2px 4px 9px rgba(0,0,0,0,0.5);;
+    }
+    .form-kontrol {
+        text-align: left;
+        margin-bottom: 20px;
+        animation: animasi ;
+        animation-duration:2.5s; 
+        animation-timing-function: ease-out;
+    }
+    .form-kontrol label {
+        display: block;
+        padding-left: 5px;
+        margin-bottom: 10px;
+    }
+    .form-kontrol input,
+    .form-kontrol select,
+    .form-kontrol textarea{
+        padding: 4px;
+        border: 2px solid black;
+        border-radius: 5px;
+        font-style: normal;
+        font-family: 'Lucida Sans';
+        font-size: 13px;
+        line-break: 12px;
+        margin-bottom: 10px;
+        width: 30%;
+        cursor:pointer;
+        transition: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    
+    .form-kontrol input[type="radio"],
+    .form-kontrol input[type="checkbox"] {
+        width: 50px;
+    }
+    
+    .form-kontrol select{
+        width: 20%;
+    }
+    
+    button {
+        display: block;
+        margin: auto;
+        opacity: 0.5;
+        width: 30%;
+        background-color: bisque;
+        padding: 3px;
+        margin-top: 30px;
+        border: 2px solid black; 
+        font-size: 20px;
+        font-family: 'Times New Roman';
+        border-radius: 10px;
+        margin-bottom: 30px;
+        transition: 1s;
+    }
+    
+    button:hover {
+        opacity: 1; 
+        background-color: yellow;
+        width: 35%;
+        box-shadow: 2px 4px 6px green;
+        color: black;
+    }
+    
+    .border:hover{
+        width: 42.5%;
+        padding: 2px 2px;
+    }
+    
+    .form-kontrol input:hover{
+        background-color: antiquewhite;
+        box-shadow: 2px 2px 3px black;
+    }
+    
+    .form-kontrol input[type="text"]:hover {
+        width: 30%;
+    }
+    
+    .form-kontrol input[type="email"]:hover {
+        width: 30%;
+    }
+    
+    .form-kontrol textarea:hover {
+        background-color: antiquewhite;
+        width: 30%;
+        box-shadow: 2px 2px 4px black;
+    }
+    
+    .form-kontrol select:hover {
+        background-color: antiquewhite;
+    }
+    @keyframes animasi {
+        0% {width: 10%;} 
+        100% {width: 90%;} 
+    }
+    
+    @keyframes teks {
+        0% { opacity: 0; color: white;} 
+        100% { opacity: 1; color: black;}
+    }
+    
+    @keyframes kotak {
+        0% { opacity: 0; width: 0%; left: 0px; height: fit-content;}
+        100% { opacity: 1; width: 50%; left: 20px; height: fit-content;}
+    }
+</style>
+<body>
+    <div class="border">
+        <h1 class="Headline"> Form Rekam Medis </h1>
+        <h2 class="headline"> RS.BALI ROYAL</h2>
+    </div>
+    <form id="form">
+        <div class="animate">
+        <div class="form-kontrol">
+            <label for="name" id="Label-nama"> Nama :  </label>
+            <input type="text" id="nama" placeholder="Masukkan Nama">
+        </div>
+        <div class="form-kontrol">
+            <label for="Umur" id="label-umur"> Umur : </label>
+            <input type="text" id="umur" placeholder="Masukkan umur">
+        </div>
+        <div class="form-kontrol">
+            <div class="berat">
+            <label for="berat" id="berat-badan"> Berat : </label>
+            <input type="text" id=" berat-badan " placeholder="Masukkan berat badan">
+        </div>
+        </div>
+        <div class="form-kontrol">
+            <label for="Tempat" id="tempat-tinggal"> Lokasi : </label>
+            <input type="text"  id="tempat-tinggal" placeholder="Masukkan alamat rumah">
+        </div>
+        <div class="form-kontrol">
+            <label for="Tempat" id="tanggal-lahir"> tanggal lahir: </label>
+            <input type="text"  id="tanggal-lahir" placeholder="Masukkan tanggal lahir">
+        </div>
+        <div class="form-kontrol">
+            <label for="Email" id="Label-email"> Email : </label>
+            <input type="email" id="Email" placeholder="Masukan Email">
+        </div>
+    </div>
+        <div class="form-kontrol">
+            <label for="perobatan" id="cara-perobatan"> Perobatan Menggunakan ? </label>
+            <select name="Cara" id="cara-perobatan"> 
+            <option></option>    
+            <option value="Bpjs"> Bpjs </option>
+            <option value="Umum"> Umum </option>
+            </select>
+        </div>
+        <div class="form-kontrol">
+            <label for="perobatan" id="janji dokter"> sudah ada janji dengan dokter yang dituju ? </label>
+            <select name="janji" id="janji-dokter"> 
+            <option></option>   
+            <option value="belum"> sudah </option>
+            <option value="belum"> belum </option>
+            </select>
+        </div>
+        <div class="form-kontrol"> 
+            <label for="riwayat" id="penyakit"> Apakah memiliki riwayat penyakit ? </label>
+            <input type="radio" name="riwayat" id="penyakit"> Ya
+            <input type="radio" name="riwayat" id="penyakit"> tidak
+        </div>
+        <div class="form-kontrol">
+            <label for="Turunan" id="Keturunan"> Apakah memiliki Penyakit Keturunan ? </label>
+            <input type="radio" name="Turunan" id="Keturunan"> Ya
+            <input type="radio" name="Turunan" id="Keturunan"> tidak
+        </div>
+        <div class="form-kontrol">
+            <label for="Rawat" id="Rawat-inap"> Apakah Sudah Pernah Rawat Inap ? </label>
+            <input type="radio" name="Perawatan" id="rawat"> Ya 
+            <input type="radio" name="Perawatan" id="rawat"> tidak 
+        </div>
+        <div class="form-kontrol">
+            <label for="Kunjungan"> Total Kunjungan ?</label>
+            <label for="input-1">
+                <input type="checkbox" name="inpt"> 1 kali
+            </label>
+            <label for="input-2">
+                <input type="checkbox" name="inpt"> 2 kali
+            </label>
+            <label for="input-3">
+                <input type="checkbox" name="inpt"> 3 kali
+            </label>
+            <label for="input-4">
+                <input type="checkbox" name="inpt"> 8 kali + 3 rawat inap 
+            </label>
+            <label for="input-5">
+                <input type="checkbox" name="inpt"> 5 kali + 6 rawat inap 
+            </label>
+            <label for="input-6">
+                <input type="checkbox" name="inpt"> Lebih dari 10 
+            </label>
+        </div>
+        <div class="form-kontrol">
+            <label for="riwayat-penyakit"> Terakhir Terkena Penyakit</label>
+            <input type="text" id="riwayat-penyakit" placeholder=" Masukkan Penyakit....">
+        </div>
+        <div class="form-kontrol">
+            <label for="komentar">
+                Berikan Masukkan Anda
+            </label>
+            <textarea name="komentar" id="komentar" placeholder="Isi Masukkan Anda"></textarea>
+        </div>
+        <button type="submit"> Submit</button>
+        <div>copyright &copy; 2024 by Calvin gaming</div>
+    </form>
+</body>
+</html>
